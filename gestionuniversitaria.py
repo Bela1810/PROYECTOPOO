@@ -1,3 +1,17 @@
+import sys
+
+class GestionApp:
+    Estudiantes: list[str] = []
+
+
+class Estudiante:
+    def _init_(self):
+        self.nombre = None
+        self.apellidos = None
+        self.facultad = None
+        self.id = None
+        self.contraseña = None
+        self.conectado = False
 
     def registrar_estudiante(self):
         print("Bienvenido a la aplicacion de gestion universitaria, porfavor, introduzca sus datos:")
@@ -57,3 +71,21 @@
                                 self.conectado = True
                                 break
                 break
+
+    def cerrar_sesion(self):
+        decision = str(input("Desea cerrar sesion?"))
+        if decision == "Si":
+            self.conectado = False
+            sys.exit()
+        else:
+            print("La sesión continua")
+
+    def _str_(self):
+        return f"Nombre de usuario: {self.nombre}, Apellidos: {self.apellidos}, Facultad: {self.facultad}, id: {self.id}, "
+
+
+app = GestionApp()
+usuario_1 = Estudiante()
+usuario_1.registrar_estudiante()
+usuario_1.iniciar_sesion()
+usuario_1.cerrar_sesion()
