@@ -1,6 +1,4 @@
 
-
-
     def registrar_estudiante(self):
         print("Bienvenido a la aplicacion de gestion universitaria, porfavor, introduzca sus datos:")
         print("______________________________")
