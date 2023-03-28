@@ -26,7 +26,6 @@ class Estudiante:
         self.facultad = str(input("Introduzca la facultad a la que pertenece: "))
 
         self.id = str(input("Introduzca su id:"))
-
         while True:
             if GestionApp.Estudiantes.__contains__(self.id):
                 print("Ya estás registrado")
@@ -48,7 +47,7 @@ class Estudiante:
         Id = str(input("introduzca su id:"))
 
         while True:
-            if not GestionApp.Usuarios._contains_(Id):
+            if not GestionApp.Estudiantes.__contains__(Id):
                 print("La id no esta registrada, porfavor revisar")
                 Id = str(input("introduzca la id del usuario:"))
             else:
